@@ -45,30 +45,10 @@ class AuthController extends Controller
                 'res' => false,
                 'message' => 'unauthenticated',
                 'error' => $th->getMessage(),
-            ], 401);   
+            ], 401);
         };
     }
 
-    public function loginIdentification(Request $request)
-    {
-        if (!isset($request->identification) || !isset($request->password)) {
-            return response()->json([
-                'res' => false,
-                'message' => 'unauthenticated',
-            ], 401);
-        };
-        if (Auth::guard('web')->attempt(['identification' => $request->identification, 'password' => $request->password])) {
-            $user = Auth::guard('web')->user();
-            $token = $user->createToken('appToken')->accessToken;
-            $dataLogin = $this->responseWithToken($user, $token);
-            return response()->json($dataLogin, 200);
-        } else {
-            return response()->json([
-                'res' => false,
-                'message' => 'credenciales_incorrectas',
-            ], 401);
-        }
-    }
     public function getUserAutheticated(Request $request)
     {
         if (Auth::guard('api')->check()) {

@@ -9,7 +9,7 @@ return [
     |
     | Here you may specify the default filesystem disk that should be used
     | by the framework. The "local" disk, as well as a variety of cloud
-    | based disks are available to your application for file storage.
+    | based disks are available to your application. Just store away!
     |
     */
 
@@ -20,11 +20,11 @@ return [
     | Filesystem Disks
     |--------------------------------------------------------------------------
     |
-    | Below you may configure as many filesystem disks as necessary, and you
-    | may even configure multiple disks for the same driver. Examples for
-    | most supported storage drivers are configured here for reference.
+    | Here you may configure as many filesystem "disks" as you wish, and you
+    | may even configure multiple disks of the same driver. Defaults have
+    | been set up for each driver as an example of the required values.
     |
-    | Supported drivers: "local", "ftp", "sftp", "s3"
+    | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
 
@@ -36,121 +36,10 @@ return [
             'throw' => false,
         ],
 
-        'documents_colaborators' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/documents_colaborators'),
-            'url' => env('APP_URL') . '/storage/documents_colaborators',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-        'image_profile_colaborators' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/image_profile_colaborators'),
-            'url' => env('APP_URL') . '/storage/image_profile_colaborators',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'excuses_logs' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/excuses_logs'),
-            'url' => env('APP_URL') . '/storage/excuses_logs',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'settings_roster_log' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/settings_roster_log'),
-            'url' => env('APP_URL') . '/storage/settings_roster_log',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'overtime_hours_logs' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/overtime_hours_logs'),
-            'url' => env('APP_URL') . '/storage/overtime_hours_logs',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'vacations_logs' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/vacations_logs'),
-            'url' => env('APP_URL') . '/storage/vacations_logs',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'postulations_img' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/postulations_img'),
-            'url' => env('APP_URL') . '/storage/postulations_img',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'incidence_types_icons' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/incidence_types_icons'),
-            'url' => env('APP_URL') . '/storage/incidence_types_icons',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'priority_types_icons' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/priority_types_icons'),
-            'url' => env('APP_URL') . '/storage/priority_types_icons',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'projects_incidence_types_icons' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/projects_incidence_types_icons'),
-            'url' => env('APP_URL') . '/storage/projects_incidence_types_icons',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'projects_priority_types_icons' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/projects_priority_types_icons'),
-            'url' => env('APP_URL') . '/storage/projects_priority_types_icons',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'preliquidations' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/preliquidations'),
-            'url' => env('APP_URL') . '/storage/preliquidations',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'prizes_archives' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/prizes_archives'),
-            'url' => env('APP_URL') . '/storage/prizes_archives',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
-        'project_gestion' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public/project_gestion'),
-            'url' => env('APP_URL') . '/storage/project_gestion',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL') . '/storage',
+            'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
         ],
